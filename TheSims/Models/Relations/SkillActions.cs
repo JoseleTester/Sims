@@ -15,5 +15,6 @@ namespace TheSims.Models.Relations
         public int ActionID { get; set; }
         [ForeignKey("ActionID")]
         public Action Action { get; set; }
+        //sandra me ensenno a usar git  
     }
 }
