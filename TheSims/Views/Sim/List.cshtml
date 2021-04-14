@@ -1,0 +1,26 @@
+﻿@model IEnumerable<Sim>
+@foreach (var p in Model)
+{
+  <div class="card border-primary mb-3" style="max-width: 20rem;">
+       <div class="card-header">@p.Name @p.LastName</div>
+       <div class="card-body">
+           <h4 class="card-title">Important</h4>
+           @if (p.Gender == 0)
+           {
+               <p class="card-text">Gender: Female</p>
+           }
+           else
+           {
+               <p class="card-text">Gender: Male</p>
+           }
+           <p class="card-text">Money: $@p.Money</p>
+
+       </div>
+
+</div>
+
+
+
+
+
+}

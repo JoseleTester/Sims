@@ -1,0 +1,16 @@
+﻿@model TheSims.Models.Sim
+<h2>Fill the spaces so you filter the list of Sims to be displayed</h2>
+
+@using (Html.BeginForm("Consult", "Sim"))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.Name)
+        @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.LastName)
+        @Html.TextBoxFor(m => m.LastName, new { @class = "form-control" })
+    </div>
+    <button type="submit" class="btn btn-primary">Search</button>
+}
