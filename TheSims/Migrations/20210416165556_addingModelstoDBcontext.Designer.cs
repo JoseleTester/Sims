@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TheSims.Models;
 
 namespace TheSims.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210416165556_addingModelstoDBcontext")]
+    partial class addingModelstoDBcontext
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -258,21 +260,6 @@ namespace TheSims.Migrations
                     b.ToTable("PetLivesTable");
                 });
 
-            modelBuilder.Entity("TheSims.Models.Relations.ProfessionUpgradesSkill", b =>
-                {
-                    b.Property<int>("ProfessionID")
-                        .HasColumnType("int");
-
-                    b.Property<int>("SkillID")
-                        .HasColumnType("int");
-
-                    b.HasKey("ProfessionID", "SkillID");
-
-                    b.HasIndex("SkillID");
-
-                    b.ToTable("ProfessionUpgradesSkillsTable");
-                });
-
             modelBuilder.Entity("TheSims.Models.Relations.SimLives", b =>
                 {
                     b.Property<int>("SimID")
@@ -286,39 +273,6 @@ namespace TheSims.Migrations
                     b.HasIndex("DomesticUnitID");
 
                     b.ToTable("SimLivesTable");
-                });
-
-            modelBuilder.Entity("TheSims.Models.Relations.SimSkills", b =>
-                {
-                    b.Property<int>("SimID")
-                        .HasColumnType("int");
-
-                    b.Property<int>("SkillID")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Points")
-                        .HasColumnType("int");
-
-                    b.HasKey("SimID", "SkillID");
-
-                    b.HasIndex("SkillID");
-
-                    b.ToTable("SimSkillsTable");
-                });
-
-            modelBuilder.Entity("TheSims.Models.Relations.SkillActions", b =>
-                {
-                    b.Property<int>("SkillID")
-                        .HasColumnType("int");
-
-                    b.Property<int>("ActionID")
-                        .HasColumnType("int");
-
-                    b.HasKey("SkillID", "ActionID");
-
-                    b.HasIndex("ActionID");
-
-                    b.ToTable("SkillActionsTable");
                 });
 
             modelBuilder.Entity("TheSims.Models.Relations.Travel", b =>
@@ -517,25 +471,6 @@ namespace TheSims.Migrations
                     b.Navigation("Pet");
                 });
 
-            modelBuilder.Entity("TheSims.Models.Relations.ProfessionUpgradesSkill", b =>
-                {
-                    b.HasOne("TheSims.Models.Profession", "Profession")
-                        .WithMany()
-                        .HasForeignKey("ProfessionID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("TheSims.Models.Skill", "Skill")
-                        .WithMany()
-                        .HasForeignKey("SkillID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Profession");
-
-                    b.Navigation("Skill");
-                });
-
             modelBuilder.Entity("TheSims.Models.Relations.SimLives", b =>
                 {
                     b.HasOne("TheSims.Models.DomesticUnit", "DomesticUnit")
@@ -553,44 +488,6 @@ namespace TheSims.Migrations
                     b.Navigation("DomesticUnit");
 
                     b.Navigation("Sim");
-                });
-
-            modelBuilder.Entity("TheSims.Models.Relations.SimSkills", b =>
-                {
-                    b.HasOne("TheSims.Models.Sim", "Sim")
-                        .WithMany()
-                        .HasForeignKey("SimID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("TheSims.Models.Skill", "Skill")
-                        .WithMany()
-                        .HasForeignKey("SkillID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Sim");
-
-                    b.Navigation("Skill");
-                });
-
-            modelBuilder.Entity("TheSims.Models.Relations.SkillActions", b =>
-                {
-                    b.HasOne("TheSims.Models.Action", "Action")
-                        .WithMany()
-                        .HasForeignKey("ActionID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("TheSims.Models.Skill", "Skill")
-                        .WithMany()
-                        .HasForeignKey("SkillID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Action");
-
-                    b.Navigation("Skill");
                 });
 
             modelBuilder.Entity("TheSims.Models.Relations.Travel", b =>

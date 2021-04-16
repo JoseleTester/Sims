@@ -6,16 +6,17 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 namespace TheSims.Models.Relations
 {
-    public class PetLives
+    public class ProfessionUpgradesSkill
     {
         [Key, Column(Order = 0)]
-        public int PetID { get; set; }
-        [ForeignKey("PetID")]
-        public Pet Pet { get; set; }
+        public int ProfessionID { get; set; }
+        [ForeignKey("ProfessionID")]
+        public Profession Profession { get; set; }
 
         [Key, Column(Order = 1)]
-        public int DomesticUnitID { get; set; }
-        [ForeignKey("DomesticUnitID")]
-        public DomesticUnit DomesticUnit { get; set; }
+        public int SkillID { get; set; }
+        [ForeignKey("SkillID")]
+
+        public Skill Skill { get; set; }
     }
 }
