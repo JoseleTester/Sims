@@ -14,7 +14,8 @@ namespace TheSims.Models
         IQueryable<Quest> Quests { get; }
         IQueryable<Skill> Skills { get; }
         IQueryable<World> Worlds { get; }
-      
+        
+
         IQueryable<Exercise> Exercises { get; }
         IQueryable<Involve> Involvements { get; }
         IQueryable<Perform> Performances { get; }
@@ -26,6 +27,19 @@ namespace TheSims.Models
         IQueryable<SimLives> SimLivesTable { get; }
         IQueryable<SimSkills> SimSkillsTable { get; }
         IQueryable<SkillActions> SkillActionsTable { get; }
+
+
+       
+        void SaveSims(Sim sim);
+    //    void SaveDomesticUnits(DomesticUnit domesticUnit);
+    //    void SaveActions(Action action);
+    //    void SaveNeighborhoods(Neighborhood neighborhood);
+    //    void SavePets(Pet pet);
+    //    void SaveProfessions(Profession profession);
+    //    void SavePlaces(Place place);
+    //    void SaveQuests(Quest quest);
+    //    void SaveSkills(Skill skill);
+    //    void SaveWorlds(World world);
 
     }
 }

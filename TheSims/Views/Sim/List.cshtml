@@ -5,14 +5,8 @@
        <div class="card-header">@p.Name @p.LastName</div>
        <div class="card-body">
            <h4 class="card-title">Important</h4>
-           @if (p.Gender == 0)
-           {
-               <p class="card-text">Gender: Female</p>
-           }
-           else
-           {
-               <p class="card-text">Gender: Male</p>
-           }
+          
+           <p class="card-text">Gender: @p.Gender</p>
            <p class="card-text">Money: $@p.Money</p>
 
        </div>

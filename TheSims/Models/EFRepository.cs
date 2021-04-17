@@ -35,5 +35,28 @@ namespace TheSims.Models
         public IQueryable<SimSkills> SimSkillsTable => context.SimSkillsTable;
         public IQueryable<SkillActions> SkillActionsTable => context.SkillActionsTable;
 
+
+        public void SaveSims(Sim sim)
+        {
+            if (sim.SimID == 0)
+            {
+                context.Sims.Add(sim);
+            }
+            else
+            {
+                Sim dbEntry = context.Sims
+                .FirstOrDefault(s => s.SimID == sim.SimID);
+                if (dbEntry != null)
+                {
+                    dbEntry.Name = sim.Name;
+                    dbEntry.LastName = sim.LastName;
+                    dbEntry.Money = sim.Money;
+                    dbEntry.Gender = sim.Gender;
+                    dbEntry.LifeStage = sim.LifeStage;
+                }
+            }
+            context.SaveChanges();
+        }
+
     }
 }

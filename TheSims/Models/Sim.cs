@@ -20,13 +20,12 @@ namespace TheSims.Models
         public string LastName { get; set; }
 
         public double Money { get; set; }
-
-        [Range(0, 1)]
-        public byte Gender { get; set; }
+    
+        public string Gender { get; set; }
+        [Display(Name ="Life Stage")]
         public string LifeStage { get; set; }
 
         
-        public static readonly byte Female = 0;
-        public static readonly byte Male = 1;
+     
     }
 }

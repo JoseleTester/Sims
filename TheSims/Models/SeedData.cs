@@ -20,7 +20,8 @@ namespace TheSims.Models
                     Name = "Simone",
                     LastName = "de Beauvoir",
                     Money = 20000,
-                    Gender = 0
+                    Gender = "Female",
+                    LifeStage = "Elder"
 
                 },
 
@@ -29,15 +30,18 @@ namespace TheSims.Models
                     Name = "Qua",
                     LastName = "Simodo",
                     Money = 300,
-                    Gender = 1
+                    Gender = "Male",
+                    LifeStage = "Adult"
+
                 },
 
                 new Sim
                 {
                     Name = "Roberlandy",
                     LastName = "Simón",
-                    Money = 15.577,
-                    Gender = 1
+                    Money = 0,
+                    Gender = "Male",
+                    LifeStage = "Infant"
                 }
 
                 );
