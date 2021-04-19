@@ -30,16 +30,17 @@ namespace TheSims.Models
 
 
        
-        void SaveSims(Sim sim);
-    //    void SaveDomesticUnits(DomesticUnit domesticUnit);
-    //    void SaveActions(Action action);
-    //    void SaveNeighborhoods(Neighborhood neighborhood);
-    //    void SavePets(Pet pet);
-    //    void SaveProfessions(Profession profession);
-    //    void SavePlaces(Place place);
-    //    void SaveQuests(Quest quest);
-    //    void SaveSkills(Skill skill);
-    //    void SaveWorlds(World world);
+        void SaveSim(Sim sim);
+        Sim DeleteSim(int productID);
+        //    void SaveDomesticUnits(DomesticUnit domesticUnit);
+        //    void SaveActions(Action action);
+        //    void SaveNeighborhoods(Neighborhood neighborhood);
+        //    void SavePets(Pet pet);
+        //    void SaveProfessions(Profession profession);
+        //    void SavePlaces(Place place);
+        //    void SaveQuests(Quest quest);
+        //    void SaveSkills(Skill skill);
+        //    void SaveWorlds(World world);
 
     }
 }

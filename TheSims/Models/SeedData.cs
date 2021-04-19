@@ -83,6 +83,22 @@ namespace TheSims.Models
                 );
                 context.SaveChanges();
             }
+            if (!context.Professions.Any())
+            {
+                context.Professions.AddRange(
+                new Profession
+                {
+                    Name = "Programmer",
+                    BasicSalary = 10000
+                },
+                new Profession
+                {
+                    Name = "Thief",
+                    BasicSalary = 100
+                }
+                );
+                context.SaveChanges();
+            }
         }
     }
 }

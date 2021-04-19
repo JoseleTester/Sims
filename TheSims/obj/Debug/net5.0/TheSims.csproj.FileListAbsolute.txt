@@ -73,6 +73,7 @@ C:\Users\Jose Alejandro\Documents\asp .net\Projects\TheSims\TheSims\TheSims\bin\
 C:\Users\Jose Alejandro\Documents\asp .net\Projects\TheSims\TheSims\TheSims\obj\Debug\net5.0\Razor\Views\Sim\FilterForm.cshtml.g.cs
 C:\Users\Jose Alejandro\Documents\asp .net\Projects\TheSims\TheSims\TheSims\obj\Debug\net5.0\Razor\Views\Sim\List.cshtml.g.cs
 C:\Users\Jose Alejandro\Documents\asp .net\Projects\TheSims\TheSims\TheSims\obj\Debug\net5.0\Razor\Views\DomesticUnit\List.cshtml.g.cs
-C:\Users\Jose Alejandro\Documents\asp .net\Projects\TheSims\TheSims\TheSims\obj\Debug\net5.0\Razor\Views\Admin\SimsIndex.cshtml.g.cs
 C:\Users\Jose Alejandro\Documents\asp .net\Projects\TheSims\TheSims\TheSims\obj\Debug\net5.0\Razor\Views\Shared\_AdminLayout.cshtml.g.cs
-C:\Users\Jose Alejandro\Documents\asp .net\Projects\TheSims\TheSims\TheSims\obj\Debug\net5.0\Razor\Views\Admin\SimsEdit.cshtml.g.cs
+C:\Users\Jose Alejandro\Documents\asp .net\Projects\TheSims\TheSims\TheSims\obj\Debug\net5.0\Razor\Views\Sim\Edit.cshtml.g.cs
+C:\Users\Jose Alejandro\Documents\asp .net\Projects\TheSims\TheSims\TheSims\obj\Debug\net5.0\Razor\Views\Sim\Index.cshtml.g.cs
+C:\Users\Jose Alejandro\Documents\asp .net\Projects\TheSims\TheSims\TheSims\obj\Debug\net5.0\Razor\Views\Sim\Profile.cshtml.g.cs

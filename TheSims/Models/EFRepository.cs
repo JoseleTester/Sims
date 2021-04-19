@@ -36,7 +36,7 @@ namespace TheSims.Models
         public IQueryable<SkillActions> SkillActionsTable => context.SkillActionsTable;
 
 
-        public void SaveSims(Sim sim)
+        public void SaveSim(Sim sim)
         {
             if (sim.SimID == 0)
             {
@@ -57,6 +57,16 @@ namespace TheSims.Models
             }
             context.SaveChanges();
         }
-
+        public Sim DeleteSim(int simID)
+        {
+            Sim dbEntry = context.Sims
+            .FirstOrDefault(s => s.SimID == simID);
+            if (dbEntry != null)
+            {
+                context.Sims.Remove(dbEntry);
+                context.SaveChanges();
+            }
+            return dbEntry;
+        }
     }
 }
